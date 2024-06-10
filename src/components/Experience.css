@@ -1,0 +1,25 @@
+.experience-card {
+  transition: all 0.3s ease;
+}
+
+.experience-card.hovered {
+  transform: scale(1.1);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .experience-card.hovered {
+    transform: scale(1.3);
+
+  }
+}
+.experience-card .card-body .list-group {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.experience-card.hovered .card-body .list-group {
+  max-height: 1000px; /* Adjust to fit the actual content height */
+}
