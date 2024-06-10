@@ -12,7 +12,7 @@ export default defineConfig({
   build: 
   {
     rollupOptions: {
-      external: ['bootstrap/dist/css/bootstrap.min.css','react-icons/fa']
+      external: ['bootstrap/dist/css/bootstrap.min.css','react-icons/fa','emailjs-com']
     }
   }
 })
