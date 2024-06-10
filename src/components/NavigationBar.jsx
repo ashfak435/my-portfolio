@@ -30,7 +30,7 @@ const NavigationBar = () => {
               <a className="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          <ul className="navbar-nav">
+          {/* <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="mailto:ashfaque87075@gmail.com">
                 <FaEnvelope size={30} />
@@ -51,7 +51,7 @@ const NavigationBar = () => {
                 <FaPhone size={30} />
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </nav>
