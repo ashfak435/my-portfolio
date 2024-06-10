@@ -8,5 +8,11 @@ export default defineConfig({
     modules:{
       localsConvention:"camelCase"
     }
+  },
+  build: 
+  {
+    rollupOptions: {
+      external: ['bootstrap/dist/css/bootstrap.min.css']
+    }
   }
 })
