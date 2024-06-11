@@ -9,7 +9,6 @@ export default defineConfig({
       localsConvention:"camelCase"
     }
   },
-  base: '/',
   build: 
   {
     rollupOptions: {
