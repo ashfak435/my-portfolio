@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
 
 const NavigationBar = () => {
   return (
@@ -30,28 +29,28 @@ const NavigationBar = () => {
               <a className="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          {/* <ul className="navbar-nav">
+          <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="mailto:ashfaque87075@gmail.com">
-                <FaEnvelope size={30} />
+              <i className="fa-solid fa-envelope fa-bounce fa-xl"></i>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="https://www.linkedin.com/in/ashfaque1x" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin size={30} />
+              <i className="fa-brands fa-linkedin fa-beat fa-xl"></i>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="https://github.com/ashfak435" target="_blank" rel="noopener noreferrer">
-                <FaGithub size={30} />
+              <i className="fa-brands fa-github fa-spin fa-xl"></i>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="tel:+918707502140">
-                <FaPhone size={30} />
+              <i className="fa-solid fa-phone fa-shake fa-xl"></i>
               </a>
             </li>
-          </ul> */}
+          </ul>
         </div>
       </div>
     </nav>

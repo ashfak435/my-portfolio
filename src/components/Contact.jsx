@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+
 
 const Contact = () => {
+  
   const [from_name,setName]=useState('');
   const [message,setMessege]=useState('');
   const [user_email,setEmail]=useState('');
@@ -19,9 +20,11 @@ const Contact = () => {
   };
 
   return (
+    
+    <>
     <section id="contact" className="my-5">
       <div className="container">
-        <h2 className="text-center">Contact</h2>
+        <h2 className="text-center hollow-text">Contact</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="formName" className="form-label">Name</label>
@@ -65,7 +68,7 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
-    </section>
+    </section></>
   );
 };
 

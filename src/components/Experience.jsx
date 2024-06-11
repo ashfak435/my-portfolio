@@ -35,43 +35,47 @@ const experiences = [
 ];
 
 const Experience = () => {
-  const handleCardHover = (event) => {
-    const card = event.target.closest('.experience-card');
-    if (card) {
-      card.classList.toggle('hovered');
-    }
-  };
-
   return (
-    <section id="experience" className="my-5">
+    <section id="experience" className="experience-section artistic">
       <div className="container">
-        <h2 className="text-center">Experience</h2>
-        <div className="row">
+        <h2 className="text-center hollow-text mb-5">Experience</h2>
+        <div className="card-grid">
           {experiences.map((experience, index) => (
-            <div
-              key={index}
-              className="col-md-4 my-2"
-              onMouseEnter={handleCardHover}
-              onMouseLeave={handleCardHover}
-            >
-              <div className="card experience-card">
-                <div className="card-body">
-                  <h5 className="card-title">{experience.title}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">{experience.company}</h6>
-                  <p className="card-text">{experience.location}</p>
-                  <p className="card-text">{experience.duration}</p>
-                  <ul className="list-group list-group-flush">
-                    {experience.responsibilities.map((responsibility, i) => (
-                      <li key={i} className="list-group-item">{responsibility}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <ExperienceCard key={index} experience={experience} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const ExperienceCard = ({ experience }) => {
+  const { title, company, location, duration, responsibilities } = experience;
+
+  return (
+    <div className="experience-card">
+      <div className="experience-header">
+        <h3 className="title">{title}</h3>
+        <div className="company-location">
+          <p className="company">{company}</p>
+          <p className="location">
+            <i className="fas fa-map-marker-alt"></i> {location}
+          </p>
+        </div>
+        <p className="duration">{duration}</p>
+      </div>
+      <div className="experience-details">
+        <ul className="responsibilities">
+          {responsibilities.map((responsibility, i) => (
+            <li key={i} className="responsibility">
+              <span className="achievement">+ </span>
+              
+              {responsibility}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

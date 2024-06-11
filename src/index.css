@@ -54,3 +54,60 @@ h1, h2, h3, h4, h5, h6, p, a {
 .project-card:hover {
   transform: scale(1.07);
 }
+
+
+/* src/components/About.css */
+.hollow-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px #007bff;
+  text-stroke: 1px #007bff;
+  margin-bottom: 20px;
+}
+
+.animated-text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hollow-text {
+    font-size: 36px;
+  }
+
+  .animated-text {
+    font-size: 16px;
+  }
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
