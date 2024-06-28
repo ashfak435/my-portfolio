@@ -30,20 +30,21 @@ const Home = () => {
         setCurrentIndex(prevIndex => prevIndex + 1);
       }, delay);
 
-    } else if (infinite) { // ADD THIS CHECK
-      setTimeout(() => {
-        setCurrentIndex(0);
-        setCurrentText('');
-      }, 3000);
+    } 
+    // else if (infinite) { // ADD THIS CHECK
+    //   setTimeout(() => {
+    //     setCurrentIndex(0);
+    //     setCurrentText('');
+    //   }, 3000);
       
-    }
+    // }
 
     return () => clearTimeout(timeout);
   }, [currentIndex, delay, infinite, text,text1,currentIndex1]);
 
   return (
-    <header className="jumbotron jumbotron-fluid bg-primary text-white text-center">
-      <div className="container">
+    <header className="jumbotron jumbotron-fluid bg-primary text-white text-center ">
+      <div className="container auto-show">
         <h1 className="display-4">{currentText1}</h1>
         <p className="lead">{currentText}</p>
       </div>

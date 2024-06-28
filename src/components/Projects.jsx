@@ -30,7 +30,7 @@ const projects = [
 
 const Project = ({ name, link, description, technologies }) => {
   return (
-    <div className="project-card">
+    <div className="project-card auto-show">
       <div className="project-image">
        
       </div>
@@ -69,7 +69,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="text-center hollow-text">Projects</h2>
+        <h2 className="text-center hollow-text auto-show">Projects</h2>
         <div className="project-grid">
           {projects.map((project, index) => (
             <Project

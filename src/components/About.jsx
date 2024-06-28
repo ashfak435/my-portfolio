@@ -42,15 +42,15 @@ const About = () => {
   }, [currentIndex, delay, infinite, text, text1, currentIndex1, currentText1]);
 
   return (
-    <section id="about" className="my-5">
+    <section id="about" className="my-5 ">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-4">
+          <div className="col-md-4 auto-show ">
             <div className="profile-pic-container">
-              <img src={profilePic} className="img-fluid" alt="Ashfaque Ahmad" />
+              <img src={profilePic} className="img-fluid " alt="Ashfaque Ahmad" />
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 auto-show ">
             <h2 className="hollow-text">{currentText1}</h2>
             <p className="animated-text">
               {currentText}

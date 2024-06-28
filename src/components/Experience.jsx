@@ -6,7 +6,7 @@ const experiences = [
     title: 'Software Engineer',
     company: 'Human Resocia',
     location: 'Tokyo, Japan',
-    duration: '11/2023 - Present',
+    duration: '11/2023 - 06/2024',
     responsibilities: [
       'Tasked with the creation of user-friendly designs, while also spearheading the development of APIs to ensure seamless integration.',
     ],
@@ -38,8 +38,8 @@ const Experience = () => {
   return (
     <section id="experience" className="experience-section artistic">
       <div className="container">
-        <h2 className="text-center hollow-text mb-5">Experience</h2>
-        <div className="card-grid">
+        <h2 className="text-center hollow-text mb-5 auto-show">Experience</h2>
+        <div className="card-grid ">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
@@ -53,7 +53,7 @@ const ExperienceCard = ({ experience }) => {
   const { title, company, location, duration, responsibilities } = experience;
 
   return (
-    <div className="experience-card">
+    <div className="experience-card auto-show">
       <div className="experience-header">
         <h3 className="title">{title}</h3>
         <div className="company-location">

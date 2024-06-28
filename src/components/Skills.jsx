@@ -24,12 +24,12 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills-section">
-      <div className="container">
-        <h2 className="text-center mb-5 hollow-text">Skills</h2>
+    <section id="skills" className="skills-section ">
+      <div className="container ">
+        <h2 className="text-center mb-5 hollow-text auto-show">Skills</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
+            <div key={index} className="skill-card auto-show">
               <div className="skill-icon">
                 <i className={skill.icon}></i>
               </div>

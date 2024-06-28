@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 
 const Contact = () => {
@@ -7,16 +7,32 @@ const Contact = () => {
   const [message,setMessege]=useState('');
   const [user_email,setEmail]=useState('');
   const formData= {from_name,user_email,message,to_name:'Ashafque Ahmad'};
+  const [disabled,setDisabled]=useState(false);
+  const buttonRef=useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    setDisabled(true);
+    if(buttonRef.current)
+      {
+        buttonRef.current.style.backgroundColor = 'gray';
+      }
+
     emailjs.send('service_p6dmrlx', 'template_vgqoimi', formData, 'KRkvJ2cNa5CrzqHsh')
       .then((result) => {
-          alert('Message sent successfully');
+        setName('');
+        setMessege('');
+        setEmail('');
+        alert('Message sent successfully');
       }, (error) => {
           console.error('There was an error sending the message!', error);
       });
+
+      setTimeout(() => {
+        setDisabled(false);
+        buttonRef.current.style.backgroundColor = '#0d6efd';
+      }, 1500);
+
   };
 
   return (
@@ -24,8 +40,8 @@ const Contact = () => {
     <>
     <section id="contact" className="my-5">
       <div className="container">
-        <h2 className="text-center hollow-text">Contact</h2>
-        <form onSubmit={handleSubmit}>
+        <h2 className="text-center hollow-text auto-show">Contact</h2>
+        <form onSubmit={handleSubmit} className='auto-show'>
           <div className="mb-3">
             <label htmlFor="formName" className="form-label">Name</label>
             <input
@@ -65,7 +81,7 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary" disabled={disabled} ref={buttonRef}>Submit</button>
         </form>
       </div>
     </section></>
